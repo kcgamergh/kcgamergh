@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>layout</title>
+	<style>
+		* {
+      box-sizing: border-box;
+      }
+
+    body {
+      font-family: sans-serif;
+      }
+        /*Style the header */
+    header {
+      background-color: red;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+
+      color: white;
+    }
+    /* Create two columns/boxes that floats next to each other */
+nav {
+  float:right;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: powderblue;
+  padding: 20px;
+}
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-bottom: 1px;
+}
+/* Style the footer */
+footer {
+  background-color:red;
+  padding: 35px;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+	</style>
+</head>
+<body>
+<header>
+    <h2>students</h2>
+  </header>
+  <section>
+    <nav style="margin: 0px;">
+       <ul>
+        <li><a href="london.html" target="Country">London</a></li>
+        <li><a href="Paris.html" target="Country">Paris</a></li>
+        <li><a href="Tokyo.html" target="Country">Tokyo</a></li>
+      </ul>
+    </nav>
+    <iframe name="Country" style="background-color: lime;width: 70%;height: 300px;border: none;margin: 0px" src="Paris.html">
+</iframe>
+</section>
+  <footer>Thank you</footer>
+
+</body>
+</html>
